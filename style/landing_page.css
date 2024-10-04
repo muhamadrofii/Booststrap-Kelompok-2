@@ -1,0 +1,368 @@
+:root {
+    --bg : #ffffff rgb(255, 251, 230);
+    --purple : #401334;
+    --yellow : #FFCC00;
+    --orange : #F2B705;
+    --red : #D32F2F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+}
+
+
+
+/* NAVBAR */
+.navbar .container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: #fdd835;
+    border-bottom: 1px solid #F2DD72;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .container-fluid img{
+    width: 20%;
+    position: absolute;
+    left: 20px;
+    margin: 0;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.navbar .navbar-main {
+    gap: 1rem;
+}
+
+.navbar .navbar-main a{
+    color: black;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.navbar .navbar-main a:hover{
+    color: var(--purple);
+}
+
+.navbar .navbar-main a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--purple);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-main a:hover::after {
+    transform: scaleX(0.5);
+}
+
+/* HOME */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.home::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+}
+
+.home .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.home .content h1 {
+    font-size: 3.5em;
+    color: var(--red);
+    line-height: 1.2;
+}
+
+.home .content h1 span {
+    color: var(--purple);
+}
+
+.home .content p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.home .content .button-belajar {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: black;
+    background-color: var(--yellow);
+    border-radius: 0.5rem;
+}
+
+/* ABOUT */
+.about, .contact, .features, .news{
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2, .features h2, .news h2, .contact h2{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span, .features h2 span, .news h2 span, .contact h2 span {
+    color: var(--purple);
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img{
+    flex: 1 1 7rem;
+}
+
+.about .row .about-img img{
+    width: 50%;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* FEATURES */
+.features .features-card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.features .features-card {
+    background: var(--yellow);
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
+    max-width: 30%;
+}
+
+.features .features-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* NEWS*/
+.news h2, .contact h2 {
+    margin-bottom: 1rem;
+}
+
+.news p, .contact p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.news .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+    justify-content: center;
+}
+
+.news .row .news-card {
+    height: 22rem;
+    
+    text-align: center;
+    flex: 1 1 30%;
+    margin: 0.5rem;
+}
+
+.news .row .news-card img{
+    height: 190px;
+    width:100%;
+}
+
+.news .row .news-card .news-card-title {
+    color: black;
+    margin: 1rem auto 0.5rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.news .row .news-card a{
+    text-decoration: none;
+}
+.news .row .news-card .news-card-button {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    color: var(--purple);
+    background-color: var(--yellow);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+.news .row .news-card .news-card-button:hover {
+    color: var(--yellow);
+    background-color: var(--purple);
+}
+
+.contact h2{
+    margin-bottom: 1rem;
+}
+.contact p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+.contact .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: var(--purple);
+    height: 30rem;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: stretch;
+}
+
+.contact img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.contact .col-md-6 {
+    flex: 1;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.contact .row form .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    background-color: var(--bg);
+    border: 1px solid #eeeeee;
+    padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+    width: 100%;
+    padding: 1.7rem;
+    font-size: 1.3rem;
+    background: none;
+    color: #ffffff;
+}
+
+.contact .row form .btn {
+    margin-top: 2.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    color: var(--red);
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+.contact .row form .btn:hover {
+    color: #ffffff;
+    background-color: var(--red);
+}
+
+/* FOOTER*/
+footer {
+    background-color: var(--purple);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+}
+
+footer .socials {
+    padding: 1rem 0;
+}
+
+footer .socials a {
+    color: #ffffff;
+    margin: 1rem;
+}
+
+footer .socials a:hover, footer .links a:hover {
+    color: var(--yellow);
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #ffffff;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    font-size: 1rem;
+    color: var(--yellow);
+}
+
+footer .credit a {
+    color: var(--yellow);
+    font-weight: 700;
+}
